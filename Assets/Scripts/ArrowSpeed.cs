@@ -46,20 +46,25 @@ public class ArrowSpeed : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+       
+
         if (col.gameObject.CompareTag("target10"))
         {
+            transform.SetParent(col.collider.transform);
             _touch = true;
             Destroy(GetComponent<Rigidbody2D>());
             GameController._score += 10;
         }
         else if (col.gameObject.CompareTag("target25"))
         {
+            transform.SetParent(col.collider.transform);
             _touch = true;
             Destroy(GetComponent<Rigidbody2D>());
             GameController._score += 25;
         }
         else if (col.gameObject.CompareTag("taget50"))
         {
+            transform.SetParent(col.collider.transform);
             _touch = true;
             Destroy(GetComponent<Rigidbody2D>());
             GameController._score += 50;

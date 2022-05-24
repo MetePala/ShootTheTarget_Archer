@@ -11,5 +11,7 @@ public class ArrowSpawner : MonoBehaviour
     public void Gonder()
     {
         Instantiate(_arrow, transform.position, _bow.transform.rotation);
+        
+
     }
 }

@@ -11,6 +11,10 @@ public class GameController : MonoBehaviour
     [SerializeField] Text _scoreText;
     bool arttir;
     [SerializeField] GameObject _crosshair;
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
     private void FixedUpdate()
     {
        if(_scrollValue<= 0.06f)
